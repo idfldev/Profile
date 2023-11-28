@@ -1,0 +1,418 @@
+/* =========================== */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+/* =============================== */
+body {
+  font-family: Arial;
+  padding: 0;
+  margin: 0;
+}
+
+/* ==== Wrapper Container === */
+.wrap-container {
+  width: 100%;
+}
+
+/* ==== HEADER === */
+header {
+  display: flex;
+  height: 60px;
+  background-color: #4682ae;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 5px 0;
+  z-index: 7;
+  box-shadow: 0px 1px 1px #206da4;
+}
+header .logo-col {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+}
+.logo-col .logo {
+  height: 50px;
+  margin-right: 10px;
+}
+.logo-col .brand-name {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em;
+}
+header .nav-col {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  margin: auto;
+  justify-content: end;
+}
+/* ==== MAIN === */
+#main {
+  width: 100%;
+}
+#home {
+  width: 100%;
+  display: block;
+}
+#home .section1 {
+  width: 80%;
+  height: 100px;
+  margin: 53px auto 10px auto;
+  background-image: url(./img/avatar.jpg);
+  text-align: center;
+  display: block;
+  /* box-shadow: inset; */
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.section1 h2 {
+  color: #206da4;
+  transition: .5s;
+  font-size: 2em;
+  line-height: 100px;
+}
+.section1 h2:hover {
+  font-size: 2.2em;
+}
+.sections {
+  padding: 5px;
+  border-radius: 5px;
+  width: 80%;
+  margin: 20px auto;
+}
+.sections h3 {
+  text-align: center;
+  color: tomato;
+  font-weight: 700;
+  margin: 5px 0;
+  font-size: 2em;
+  transition: .5s;
+}
+.sections h3:hover {
+  font-size: 3.5em;
+}
+/* ------ Course section ------------------ */
+.courses-block .course-img {
+  width: 100%;
+  border-radius: 10px;
+  transition: .5s;
+  box-shadow: 1px 1px 1px #626262;
+}
+.courses-block .course-img:hover {
+  margin-top: 5px;
+  width: 98%;
+}
+/* -------------------------- */
+.hotline {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  border-radius: 5px;
+  padding: 10px 0;
+  box-shadow: 1px 1px 2px #626161;
+	animation: pulse 1s infinite ease-in-out alternate;
+
+}
+@keyframes pulse {
+	from {
+		transform: scale(0.8);
+	}
+	to {
+		transform: scale(1.1);
+	}
+}
+.hotline span {
+  color: tomato;
+  font-size: 20px;
+}
+
+.contact-us {
+  margin: 50px auto;
+  width: 80%;
+  text-align: left;
+}
+.email-row input {
+  width: 90%;
+  height: 50px;
+  outline: none;
+  border-radius: 5px;
+}
+.message-row textarea {
+  width: 90%;
+  height: 100px;
+  outline: none;
+  border-radius: 5px;
+}
+/* -------- PROFILE-------------------------- */
+#profile {
+  width: 80%;
+  margin: 55px auto;
+}
+#profile .avatar-block {
+  display: flex;
+}
+.avatar-block .avatar-col {
+  width: 48%;
+  text-align: center;
+  border-radius: 5px;
+  margin: 5px;
+}
+.avatar-col .avatar {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px #626262;
+}
+.avatar-block .avatar-info {
+  width: 94%;
+  border-radius: 5px;
+  margin-left: -26px;
+}
+.avatar-info h2 {
+  font-size: 3em;
+}
+.avatar-info span {
+  font-size: 2em;
+  text-decoration: underline;
+}
+.avatar-info p {
+  font-size: 2em;
+  margin-right: 5px;
+  width: 90%;
+}
+/* ---- link-tree-block ---------  */
+.link-tree-block {
+  margin: 0 auto;
+  width: 84%;
+}
+
+.btn {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  background-color: #206da4;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #fff;
+  height: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 50px;
+  transition: 0.5s;
+  margin: 10px 0;
+}
+.btn:hover {
+  background-color: #622be2;
+  font-size: 18px;
+}
+.btn:active {
+  background-color: #e91756;
+}
+i.fa {
+  font-size: 24px;
+  margin: auto 5px;
+}
+
+.btn-tree {
+  background-color: #206da4;
+  height: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+.btn-tree a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.5s;
+}
+.btn-tree:hover {
+  background-color: #622be2;
+  font-size: 18px;
+}
+.btn-tree:active {
+  background-color: #e91756;
+}
+/* ==== Components === */
+.tab .btn-profile {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  color: #fff;
+  margin: 0 2px;
+}
+
+.tab .btn-profile:hover {
+  color: #fff;
+}
+
+.tab .btn-profile.active {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.pagecontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+  margin-top: 58px auto;
+  width: 100%;
+}
+
+/* ==== FOOTER === */
+footer {
+  background-color: #4682ae;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  color: #f1f1f1;
+}
+
+/* ========= For mobile phones: ===================== */
+[class*="col-"] {
+  width: 100%;
+}
+/* Extra small devices (phones, 375px and down) */
+@media only screen and (min-width: 375px) {
+  .avatar-info h2 {
+    font-size: 12px;
+  }
+  .avatar-info span {
+    font-size: .7em;
+  }
+  .avatar-info p {
+    width: 100%;
+    font-size: .7em;
+  }
+  .link-tree-block {
+    margin: 0 auto;
+    width: 99%;
+  }
+  .section1 h2 {
+    font-size: .8em;
+  }
+  .section1 h2:hover {
+    font-size: 1em;
+  }
+}
+/* Extra small devices (phones, 420px and down) */
+@media only screen and (min-width: 425px) {
+  .avatar-info h2 {
+    font-size: .8em;
+  }
+  .avatar-info span {
+    font-size: .7em;
+  }
+  .avatar-info p {
+    width: 100%;
+    font-size: .7em;
+  }
+  .link-tree-block {
+    margin: 0 auto;
+    width: 99%;
+  }
+  .section1 h2 {
+    font-size: 1em;
+  }
+  .section1 h2:hover {
+    font-size: 1.1em;
+  }
+}
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+  .avatar-info h2 {
+    font-size: 2em;
+  }
+  .avatar-info span {
+    font-size: 1em;
+  }
+  .avatar-info p {
+      width: 90%;
+      font-size: 1em;
+  }
+  .section1 h2 {
+    font-size: 1em;
+  }
+  .section1 h2:hover {
+    font-size: 1.1em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+  .avatar-info h2 {
+    font-size: 2em;
+  }
+  .avatar-info span {
+    font-size: 1em;
+  }
+  .avatar-info p {
+      width: 90%;
+      font-size: 1em;
+  }
+  .section1 h2 {
+    font-size: 1.5em;
+  }
+  .section1 h2:hover {
+    font-size: 1.8em;
+  }
+}
+/* Extra small devices (phones, 2560px and down) */
+@media only screen and (min-width: 2560px) {
+  .avatar-info h2 {
+    font-size: 3em;
+  }
+  .avatar-info span {
+    font-size: 2em;
+  }
+  .avatar-info p {
+      width: 90%;
+      font-size: 2em;
+  }
+}
